@@ -15,7 +15,7 @@ export const getTransaction = async (req, res) => {
                 return transactionData[key];
             })
             .sort((a, b) => {
-                return a.sales_reference - b.sales_reference;
+                return b.sales_reference - a.sales_reference;
             });
         res.jsonp({
             status: 200,
